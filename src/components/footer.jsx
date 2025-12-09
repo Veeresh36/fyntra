@@ -10,7 +10,7 @@ import y1 from '../assets/footer/y1.png'
 function footer() {
     return (
         <div >
-            <div className={`container-fluid ${style.footer}`}>
+            <div className={` ${style.footer}`}>
                 <div className={style.links}>
                     <ul>
                         <h3>Customer Support</h3>
