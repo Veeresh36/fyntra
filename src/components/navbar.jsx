@@ -9,7 +9,7 @@ import m1 from '../assets/header/mobile nav/m1.png'
 import m2 from '../assets/header/mobile nav/m2.png'
 import m3 from '../assets/header/mobile nav/m3.png'
 import m4 from '../assets/header/mobile nav/m4.png'
-import m5 from '../assets/header/mobile nav/m5.png'
+import m5 from '../assets/header/mobile nav/m6.png'
 
 import logo from '../../src/assets/logo/Fyntra.png'
 import c12 from '../assets/header/categories icons/12.png'
@@ -507,7 +507,7 @@ function navbar({ setFillPros, fillpros, role }) {
                         <ul>
                             <li><NavLink to='/'><img src={m1} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/addps'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
-                            <li><NavLink to='/'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
+                            <li><NavLink to='/login'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/users'><img src={m2} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/cart'><img src={m4} alt="mobileNav Icons" /></NavLink></li>
                         </ul>
@@ -515,12 +515,12 @@ function navbar({ setFillPros, fillpros, role }) {
                 </div>
 
                 {role === "user" && (
-                    <div className={style.mobNav}>
+                    <div className={`${style.mobNav}`}>
                         <nav className={`navbar fixed-bottom navbar-dark justify-content-around ${style.mobLinks}`}>
-                            <ul>
+                            <ul >
                                 <li><NavLink to='/'><img src={m1} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/addps'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
-                                <li><NavLink to='/'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
+                                <li><NavLink to='/userorders'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/users'><img src={m2} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/cart'><img src={m4} alt="mobileNav Icons" /></NavLink></li>
                             </ul>

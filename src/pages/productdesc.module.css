@@ -6,16 +6,42 @@
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
+
+a.back {
+    width: 100%;
+    height: 30px;
+    background-color: #edecec;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.back span {
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+
+a>.arrow {
+    width: 25px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     max-width: 1300px;
     gap: 40px;
-    margin-top: 40px;
+    margin-top: -10px;
 }
 
 /* -------- Left Side (Images) -------- */
@@ -24,8 +50,9 @@
     flex-direction: column-reverse;
     gap: 20px;
     width: 100%;
-    position: sticky;
-    top: 0;
+    margin-top: -30px;
+    /* position: sticky;
+    top: 0; */
 }
 
 /* -------- Image Group (Thumbnails) -------- */
@@ -121,6 +148,151 @@
 
 /* -------- Responsive Layouts -------- */
 
+@media (min-width: 475px) {
+
+    /* -------- Base Layout -------- */
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1300px;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    /* -------- Left Side (Images) -------- */
+    .leftBox {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 100%;
+        /* position: sticky;
+    top: 0; */
+    }
+
+    /* -------- Image Group (Thumbnails) -------- */
+    .imgGroup {
+        display: flex;
+        flex-direction: row;
+        /* Horizontal on small screens */
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        overflow-x: auto;
+        /* Horizontal scroll */
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        /* Firefox */
+    }
+
+    .imgGroup::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .imgGroup::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 5px;
+    }
+
+    .imgs {
+        flex: 0 0 auto;
+        width: 80px;
+        height: 80px;
+        border-radius: 6px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .imgs:hover {
+        transform: scale(1.08);
+    }
+
+    /* -------- Main Image -------- */
+    .hoveredImg {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+    }
+
+    .hoveredImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+    }
+
+    .hoveredImg img:hover {
+        transform: scale(1.05);
+    }
+
+    /* -------- Right Side (Product Info) -------- */
+    .rightBox {
+        width: 100%;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        gap: 10px;
+    }
+
+    /* -------- Alert -------- */
+    .alertBox {
+        position: fixed;
+        bottom: 15px;
+        right: 20px;
+        z-index: 100;
+    }
+}
+
+@media (min-width: 620px) {
+    .card{
+        margin-top: -10px;
+    }
+
+    .leftBox {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .imgGroup {
+        flex-direction: column;
+        /* Vertical on larger screens */
+        width: 20%;
+        height: 65vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
 /* ----- Tablets (≥768px) ----- */
 @media (min-width: 768px) {
     .card {
@@ -130,7 +302,7 @@
     }
 
     .leftBox {
-        flex-direction: column-reverse;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         flex: 1;
@@ -138,9 +310,9 @@
     }
 
     .imgGroup {
-        flex-direction: row;
+        flex-direction: column;
         /* Vertical on larger screens */
-        width: 100%;
+        width: 20%;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
@@ -150,7 +322,7 @@
         height: 500px;
     }
 
-    .hoveredImg img{
+    .hoveredImg img {
         width: 100%;
     }
 
@@ -167,6 +339,7 @@
         flex-direction: row;
         align-items: flex-start;
         gap: 40px;
+        margin-top: 50px;
     }
 
     .leftBox {
@@ -191,7 +364,7 @@
         height: 500px;
     }
 
-    .hoveredImg img{
+    .hoveredImg img {
         width: 100%;
     }
 
@@ -199,6 +372,31 @@
         flex: 1;
         max-width: 55%;
         padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    a.back {
+        width: fit-content;
+        height: fit-content;
+        background-color:transparent;
+        padding: 10px;
+        position: relative;
+        top: -25px;
+        margin-right: -45px;
+    }
+
+    .back span {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+
+
+    a>.arrow {
+        width: 50px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        padding: 5px;
     }
 }
 

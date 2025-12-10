@@ -1,6 +1,5 @@
 .passContainer {
     width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +12,7 @@ h2 {
 
 
 .passContainer form {
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: #fff;
     padding: 40px;
@@ -194,7 +193,6 @@ form input {
 @media (min-width: 1024px) {
     .passContainer {
         width: 100%;
-        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -243,7 +241,6 @@ form input {
 @media (min-width: 1280px) {
     .passContainer {
         width: 100%;
-        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;

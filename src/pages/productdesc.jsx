@@ -3,6 +3,8 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import style from '../pages/productdesc.module.css';
 import { userCart } from '../components/addtocart';
 
+import arrow from '../assets/arrow.png'
+
 function ProductDesc() {
     const location = useLocation();
     const { state } = location;
@@ -38,6 +40,7 @@ function ProductDesc() {
             )}
 
             <div className={`column ${style.card}`}>
+                <Link className={style.back} to="/"><img src={arrow} className={style.arrow} alt="" /> <span className='d-lg-none'>{product.productname}</span></Link>
                 <div className={`col-md-6 ${style.leftBox}`}>
                     <div className={style.imgGroup}>
                         {product.images?.map((img, index) => (

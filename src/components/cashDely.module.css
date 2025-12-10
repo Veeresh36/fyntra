@@ -1,10 +1,13 @@
 .mainCart {
     display: flex;
-
+    flex-direction: column;
 }
 
 .leftPage {
-    width: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .leftPage .qtyControls {
@@ -40,7 +43,7 @@ body {
 }
 
 .rightPage {
-    width: 50%;
+    width: 100%;
     height: fit-content;
     background-color: #f9f9f9;
     padding: 10px;
@@ -68,12 +71,12 @@ body {
 .maincontainer {
     width: 100%;
     display: flex;
-    width: 100%;
+    justify-content: center;
     align-items: center;
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -84,7 +87,7 @@ body {
     padding: 10px;
 }
 
-.cartBody{
+.cartBody {
     width: 100%;
 }
 
@@ -108,6 +111,11 @@ body {
 }
 
 .title {
+    width: 30ch;
+    /* Around 3 words width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 8px;
@@ -133,6 +141,7 @@ body {
 
 /* Grand Total Card */
 .grandTotalCard {
+    width: 100%;
     background: #f8f9fa;
     border: 2px solid #28a745;
 }
@@ -174,7 +183,7 @@ body {
 .card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -272,3 +281,318 @@ hr {
     width: 100%;
     padding: 15px 5px;
 }
+
+/* Xs  */
+@media (min-width: 475px) {
+    .title {
+        width: 100ch;
+        /* Around 3 words width */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333;
+    }
+}
+
+/* Sm  */
+/* @media (min-width: 640px){} */
+
+/* Md  */
+/* @media (min-width: 768px){} */
+
+/* Lg  */
+@media (min-width: 1024px) {
+    .mainCart {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .leftPage {
+        width: 40%;
+        display: flex;
+        position: sticky;
+        top: 25px;
+    }
+
+    .leftPage .qtyControls {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card img {
+        display: none;
+        width: 50px;
+    }
+
+    .card .title {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .leftPage .container {
+        position: sticky;
+        top: 10px;
+        overflow: scroll;
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+    .rightPage {
+        width: 50%;
+        height: fit-content;
+        background-color: #f9f9f9;
+        padding: 10px;
+        position: sticky;
+        top: 30px;
+    }
+
+    .rightPage .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mainCart {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+
+    }
+
+    .cartImg {
+        width: 120px;
+        height: auto;
+    }
+
+    .maincontainer {
+        width: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #888;
+        padding: 10px;
+    }
+
+    .cartBody {
+        width: 100%;
+    }
+
+    /* Product Row Layout */
+    .productRow {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .cartImg {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .productDetails {
+        flex: 1;
+    }
+
+    .title {
+        width: 30ch;
+        /* Around 3 words width */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .priceInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price {
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    .itemTotal {
+        font-weight: 600;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    /* Grand Total Card */
+    .grandTotalCard {
+        background: #f8f9fa;
+        border: 2px solid #28a745;
+    }
+
+    .grandTotalBody {
+        padding: 20px;
+    }
+
+    .grandTotalRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .grandTotalLabel {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .grandTotalAmount {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #28a745;
+    }
+
+    .deliveryNote {
+        text-align: center;
+        color: #666;
+        font-size: 0.8rem;
+    }
+
+    /* Cards Content */
+    .cardsContent {
+        margin-bottom: 15px;
+    }
+
+    .card {
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .paymentProducts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .cartBody .price {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .total {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* right cart */
+    .mainCart {
+        width: 100%;
+    }
+
+    .paymentInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .firstField {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .firstField input {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+
+    .CODDetails {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 30px 0;
+    }
+
+    .CODDetails span {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 5px 0;
+    }
+
+    .CODDetails span>span {
+        font-weight: 600;
+        color: #816100;
+        letter-spacing: 1px;
+        display: flex;
+    }
+
+    .secondField {
+        display: flex;
+        width: 100%;
+        padding: 15px 5px;
+        gap: 20px;
+    }
+
+    .secondField .month,
+    .cvv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondField .month input {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .secondField .cvv input {
+        width: 100%;
+        padding: 15px 5px;
+    }
+}
+
+/* XL  */
+
+/* @media (min-width: 1280px){} */
+/* 2xL  */
+
+/* @media (min-width: 1536px){} */

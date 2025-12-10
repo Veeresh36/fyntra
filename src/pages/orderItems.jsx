@@ -70,7 +70,7 @@ function OrderItems() {
                                     </div>
 
                                     <p
-                                        className={`p-2 w-50 text-center text-light rounded ${order.deliverystatus === "Delivered"
+                                        className={`p-2 ${style.btn} text-center text-light rounded ${order.deliverystatus === "Delivered"
                                             ? "bg-success"
                                             : order.deliverystatus === "picked by delivery partner"
                                                 ? "bg-warning"
@@ -85,7 +85,7 @@ function OrderItems() {
                                     {/* Show rate button only for delivered orders */}
                                     <div key={order.orderId}>
                                         {order.deliverystatus === "Delivered" && (
-                                            <button onClick={() => ratingBtnHandler(order.productid)}>
+                                            <button className={style.btn} onClick={() => ratingBtnHandler(order.productid)}>
                                                 Rate this Product
                                             </button>
                                         )}

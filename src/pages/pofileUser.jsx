@@ -37,12 +37,12 @@ function PofileUser() {
                     <div className={style.profileMenu}>
 
                         {/* Profile Image */}
-                        <div className={style.profileImgBox}>
+                        <div className={`${style.profileImgBox} d-none d-lg-block`}>
                             {imgs.map((img, index) => (
                                 <img
                                     key={index}
                                     src={img.imglink}
-                                    className={style.profileImg}
+                                    className={`${style.profileImg}`}
                                     alt="Profile"
                                 />
                             ))}
@@ -54,7 +54,7 @@ function PofileUser() {
                                 className={`${style.navItems} ${activeSection === 'profile' ? style.active : ''}`}
                                 onClick={() => setActiveSection("profile")}
                             >
-                                Personal Information
+                                Profile
                             </li>
 
                             <li
@@ -85,7 +85,6 @@ function PofileUser() {
                     {activeSection === "password" && (
                         <div>
                             <Forgot />
-
                         </div>
                     )}
                 </div>

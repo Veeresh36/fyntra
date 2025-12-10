@@ -76,7 +76,7 @@ body {
 }
 
 .qtyControls {
-    width: 80px;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,51 +142,83 @@ hr {
 
 /* Xs  */
 
-@media (min-width: 475px){
+@media (min-width: 475px) {
     .card {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid #888;
-    padding: 20px 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #888;
+        padding: 20px 20px;
+    }
+
+    .cartBody {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cartImg {
+        width: 150px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .qtyControls {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 50px;
+        border: 1px solid orange;
+    }
+
 }
 
-.cartBody {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cartImg {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-}
-
-}
 /* Sm  */
 
-/* @media (min-width: 640px){} */
+@media (min-width: 640px) {
+    .qtyControls {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 50px;
+        border: 1px solid orange;
+    }
+}
+
 /* Md  */
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .qtyControls {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 50px;
+        border: 1px solid orange;
+    }
+}
 
 /* Lg  */
 
 @media (min-width: 1024px) {
     .mainCart {
-    width: 90%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    margin: 0;
-}
+        width: 90%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: row;
+        margin: 0;
+    }
 
     .leftPage {
         width: 60%;
@@ -257,7 +289,7 @@ hr {
     }
 
     .qtyControls {
-        width: 80px;
+        width: 120px;
         display: flex;
         align-items: center;
         justify-content: center;
