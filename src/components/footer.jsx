@@ -36,10 +36,10 @@ function footer() {
                     <ul className={style.socialmedia}>
                         <h3>Social Media</h3>
                         <li>
-                            <Link to="/notfound" target='blank'><img src={f1} alt="" /></Link>
-                            <Link to="/notfound" target='blank' ><img src={i1} alt="" /></Link>
-                            <Link to="/notfound" target='blank' ><img src={t1} alt="" /></Link>
-                            <Link to="/notfound" target='blank' ><img src={y1} alt="" /></Link>
+                            <Link to="/notfound" className={style.icons} target='blank'><img src={f1} alt="" /></Link>
+                            <Link to="/notfound" className={style.icons} target='blank' ><img src={i1} alt="" /></Link>
+                            <Link to="/notfound" className={style.icons} target='blank' ><img src={t1} alt="" /></Link>
+                            <Link to="/notfound" className={style.icons} target='blank' ><img src={y1} alt="" /></Link>
                         </li>
                     </ul>
 

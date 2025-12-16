@@ -455,7 +455,7 @@ function navbar({ setFillPros, fillpros, role }) {
                     )}
                 </nav>
 
-                {/* categouries */}
+                { /* categouries */}
                 <nav className={`navbar navbar-expand-lg navbar-dark ${style.navbar2}`}>
                     <div className="container-fluid">
 
@@ -506,7 +506,7 @@ function navbar({ setFillPros, fillpros, role }) {
                     <nav className={`navbar fixed-bottom navbar-dark justify-content-around ${style.mobLinks}`}>
                         <ul>
                             <li><NavLink to='/'><img src={m1} alt="mobileNav Icons" /></NavLink></li>
-                            <li><NavLink to='/addps'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
+                            <li><NavLink to='/login'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/login'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/users'><img src={m2} alt="mobileNav Icons" /></NavLink></li>
                             <li><NavLink to='/cart'><img src={m4} alt="mobileNav Icons" /></NavLink></li>
@@ -519,7 +519,7 @@ function navbar({ setFillPros, fillpros, role }) {
                         <nav className={`navbar fixed-bottom navbar-dark justify-content-around ${style.mobLinks}`}>
                             <ul >
                                 <li><NavLink to='/'><img src={m1} alt="mobileNav Icons" /></NavLink></li>
-                                <li><NavLink to='/addps'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
+                                <li><NavLink to='/categouries'><img src={m3} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/userorders'><img src={m5} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/users'><img src={m2} alt="mobileNav Icons" /></NavLink></li>
                                 <li><NavLink to='/cart'><img src={m4} alt="mobileNav Icons" /></NavLink></li>

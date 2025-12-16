@@ -26,6 +26,7 @@ import Footer from '../components/footer'
 import Managepros from '../pages/admin/managepros'
 import Ratings from '../components/ratings'
 import Userinfo from '../pages/userinfo'
+import CatesLints from '../components/categourisList'
 
 // cats
 import Cloths from '../../src/pages/cats/Cloths'
@@ -75,11 +76,11 @@ function Layout() {
     const location = useLocation();
 
     // Hide navbars from this routes
-    const hideNavbarRoutes = ["/login", "/signup", "/otp", "/forgot", "/admin", "/dashbord", "/maindash", "/addps", "/notfound", "/Orders", "/footer", "/manageProducts", '/ratings', '/userinfo', "/editproducts/:id"];
+    const hideNavbarRoutes = ["/login", "/signup", "/otp", "/forgot", "/admin", "/dashbord", "/maindash", "/addps", "/notfound", "/Orders", "/footer", "/manageProducts", '/ratings', '/userinfo', "/editproducts/:id", "/categouries"];
     const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
 
     // Hide footers from this routes
-    const hideFooterRoutes = ["/login", "/signup", "/otp", "/forgot", "/admin", "/dashbord", "/maindash", "/addps", "/notfound", "/Orders", "/footer", "/cart", "/manageProducts", "/users", '/ratings', '/userinfo', "/editproducts/:id"];
+    const hideFooterRoutes = ["/login", "/signup", "/otp", "/forgot", "/admin", "/dashbord", "/maindash", "/addps", "/notfound", "/Orders", "/footer", "/cart", "/manageProducts", "/users", '/ratings', '/userinfo', "/editproducts/:id", "/categouries"];
     const shouldHideFooter = hideFooterRoutes.includes(location.pathname);
 
     let getCates = async () => {
@@ -137,6 +138,7 @@ function Layout() {
                 <Route path="/BabyProducts" element={<Toys fillpros={fillpros} />} />
                 <Route path="/Stationery" element={<Books fillpros={fillpros} />} />
                 <Route path="/beauty" element={<Books fillpros={fillpros} />} />
+                <Route path="/categouries" element={<CatesLints />} />
 
                 {/* admin */}
                 <Route path="/addps" element={<AdminLayout><Addps cates={cates} /></AdminLayout>} />
